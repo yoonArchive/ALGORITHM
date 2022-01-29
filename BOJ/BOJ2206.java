@@ -9,13 +9,13 @@ public class BOJ2206 {
 	static int N, M;
 	static int[][] map;
 	static int[][] visited;
-	static int[] dx = {1,0, -1, 0 };
-	static int[] dy = {0,1,0,-1 };
+	static int[] dx = { 1, 0, -1, 0 };
+	static int[] dy = { 0, 1, 0, -1 };
 
 	public static class Pair {
 		int x, y;
 		int dis;
-		int drill; // ���� Ƚ��
+		int drill;
 
 		public Pair(int x, int y, int dis, int drill) {
 			this.x = x;
@@ -25,35 +25,36 @@ public class BOJ2206 {
 		}
 	}
 
-	public static int bfs(int x, int y) throws IOException{
+	public static int bfs(int x, int y) throws IOException {
 		Queue<Pair> q = new LinkedList<>();
-		q.offer(new Pair(x, y, 1, 0)); // (0, 0)���� ����
-		visited[x][y] = 0; // ó�� ���� Ƚ��(visited�� ���� Ƚ���� ��Ÿ���� �迭)
+		q.offer(new Pair(x, y, 1, 0));
+		visited[x][y] = 0;
 
 		while (!q.isEmpty()) {
 			Pair p = q.poll();
-			bw.write(Integer.toString(p.x)+" " +Integer.toString(p.y)+" " +Integer.toString(p.dis)+" "+Integer.toString(p.drill));
+			bw.write(Integer.toString(p.x) + " " + Integer.toString(p.y) + " " + Integer.toString(p.dis) + " "
+					+ Integer.toString(p.drill));
 			bw.newLine();
 
 			if (p.x == N - 1 && p.y == M - 1)
-				return p.dis; // ���������� �����ٸ� �����Ѵ�.
+				return p.dis;
 
 			for (int i = 0; i < dx.length; i++) {
 				int nx = p.x + dx[i];
 				int ny = p.y + dy[i];
-				
-				if(nx<0 || ny<0 || nx>= N || ny>=M) continue;
-				if(visited[nx][ny]<=p.drill) continue; // ���� �� �μ� ���� ���� Ž���ߴٸ�, 
-													   // ���� �μ��� �� �ʿ����� Ž���� �ʿ� ������ �ǹ�.
-				
-				if(map[nx][ny]==0) { //���� �ƴ� ��
-					visited[nx][ny]=p.drill;
-					q.offer(new Pair(nx,ny,p.dis+1, p.drill));
-				}
-				else {//���� ��
-					if(p.drill==0) { // ���̱� ������ ���ݱ��� ���� �μ� Ƚ���� 0�̿��� ������ �� ����.
-						visited[nx][ny]=p.drill+1;
-						q.offer(new Pair(nx,ny,p.dis+1, p.drill+1));
+
+				if (nx < 0 || ny < 0 || nx >= N || ny >= M)
+					continue;
+				if (visited[nx][ny] <= p.drill)
+					continue;
+
+				if (map[nx][ny] == 0) {
+					visited[nx][ny] = p.drill;
+					q.offer(new Pair(nx, ny, p.dis + 1, p.drill));
+				} else {
+					if (p.drill == 0) {
+						visited[nx][ny] = p.drill + 1;
+						q.offer(new Pair(nx, ny, p.dis + 1, p.drill + 1));
 					}
 				}
 			}
@@ -80,10 +81,10 @@ public class BOJ2206 {
 
 		int ans = bfs(0, 0);
 		bw.write(Integer.toString(ans));
-		
+
 		br.close();
 		bw.flush();
 		bw.close();
-		
+
 	}
 }
