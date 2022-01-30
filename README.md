@@ -1,2 +1,2 @@
 # ALGORITHM
-📚 Algorithm_Study
+📚 Algorithm 문제풀이
