@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Solution_SW_D4_1223_계산기2_박기윤 {
+public class Solution_SW_D4_1223_계산기2 {
 
 	public static void main(String[] args) throws Exception {
 		System.setIn(new FileInputStream("input_1223.txt"));
