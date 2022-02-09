@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D4_1210_Ladder1_박기윤 {
+public class Solution_SW_D4_1210_Ladder1 {
 	static int map[][] = new int[100][100];
 	static int dr[] = { 0, 0, -1 }; // 좌우를 위보다 먼저 탐색해야함
 	static int dc[] = { 1, -1, 0 };
