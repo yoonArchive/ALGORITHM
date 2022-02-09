@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Solution_SW_D3_3499_퍼펙트셔플_박기윤 {
+public class Solution_SW_D3_3499_퍼펙트셔플 {
 
 	public static void main(String[] args) throws IOException {
 		System.setIn(new FileInputStream("sample_input (2).txt"));
