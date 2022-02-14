@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_6808_D3_규영이와인영이의카드게임_비트마스킹ver {
+public class Solution_SW_6808_D3_규영이와인영이의카드게임_비트마스킹ver {
 
 	public static int kyuWin, kyuLose;
 	public static int[] kyuCards = new int[10];
