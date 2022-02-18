@@ -41,7 +41,6 @@ public class Main_BJ_15683_감시 {
 
 		char[][] copyMap = new char[N][M];
 		int watchable = 0;
-
 		CCTV cur = cctvList.get(count);
 		switch (cur.id) {
 		case '1':
