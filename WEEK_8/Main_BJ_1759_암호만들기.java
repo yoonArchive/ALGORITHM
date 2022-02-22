@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main_BJ_1759_암호만들기 {
+	
 	static int L, C;
 	static char[] chars;
 	static char[] pw;

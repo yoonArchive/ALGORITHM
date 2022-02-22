@@ -19,7 +19,6 @@ public class Solution_SW_1238_Contact {
 			this.num = num;
 			this.order = order;
 		}
-
 		@Override
 		public int compareTo(contactInfo o) {
 			if (this.order == o.order)

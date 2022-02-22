@@ -22,7 +22,6 @@ public class Main_BJ_1260_DFS와BFS {
 				dfs(tmp, isVisited);
 			}
 		}
-
 	}
 
 	public static void bfs(int start, boolean isVisited[]) {
