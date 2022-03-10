@@ -75,6 +75,7 @@ public class Main_BJ_15686_치킨배달 {
 		for (int i = 0; i < chickenNum; i++)
 			order[i] = i;
 		comb(order, chickenNum, houseNum, 0, 0);
+		
 		bw.write(Integer.toString(min));
 		br.close();
 		bw.flush();
